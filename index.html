@@ -18,11 +18,13 @@
         <img src="/public/logo.png">
         <h1>Vue-Js Cinema</h1>
     </div>
-    <router-view v-bind:genre="genre"
-              v-bind:time="time"
-              v-bind:day="day"
-              v-bind:movies="movies">
-    </router-view>
+    <keep-alive>
+      <router-view v-bind:genre="genre"
+                v-bind:time="time"
+                v-bind:day="day"
+                v-bind:movies="movies">
+      </router-view>
+    </keep-alive>
 </div>
 <script src="/dist/build.js"></script>
 </body>
